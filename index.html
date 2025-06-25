@@ -64,135 +64,135 @@
     </div>
     <!-- Pokedex API -->
 </body>
-<script src="app.js"></script>
-<!--<script>-->
-    // const promise = new Promise((resolve, reject) => {
-    //     const allGood = true; // Simulate a condition
-    //     if (allGood) {
-    //         resolve("Everything is fine!");
-    //     } else {
-    //         reject("Something went wrong.");
-    //     }
-    // });
-    // console.log(promise);
-    //
-    // const promise2 = new Promise((resolve, reject) => {
-    //     const randomNumber = Math.floor(Math.random()*10);
-    //     setTimeout(() => {
-    //         if (randomNumber < 5) {
-    //             resolve ('You are correct')
-    //         } else {
-    //             reject ('You are wrong')
-    //         }
-    //     })
-    // });
+<script src="dist/app.js" defer></script>
+<script>
+    const promise = new Promise((resolve, reject) => {
+        const allGood = true; // Simulate a condition
+        if (allGood) {
+            resolve("Everything is fine!");
+        } else {
+            reject("Something went wrong.");
+        }
+    });
+    console.log(promise);
 
-    // promise2.then((result) => {
-    //     console.log(result);
-    // }).catch((error) => {
-    //     console.error(error);
-    // });
-    //
-    // console.log(promise2);
-    //
-    // // another example of showing how the promise works
-    // const promise_alt1 = new Promise((resolve, reject) => {
-    //     resolve("Promise 1 is resolved.");
-    // });
-    //
-    // const promise_alt2 = new Promise((resolve, reject) => {
-    //     resolve("Promise 2 is resolved.");
-    // });
-    //
-    // const promise_alt3 = new Promise((resolve, reject) => {
-    //     reject("error, Promise 3 is rejected.");
-    // });
-    //
-    // promise_alt1.then((value1) => {
-    //     console.log(value1);
-    //     return promise_alt2;
-    // }).then((value2) => {
-    //     console.log(value2);
-    //     return promise_alt3;
-    // }).catch((error) => {
-//         console.error(error);
-//     });
-//
-// // Example of Promise.all
-//     const promiseOne = new Promise((resolve) => {
-//         setTimeout(() => {
-//             resolve("Promise One resolved");
-//         }, 4000);
-//     });
-//
-//     const promiseTwo = new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             reject("Promise Two rejected");
-//         }, 2500);
-//     });
-//
-//     Promise.all([promiseOne, promiseTwo])
-//         .then((values) => {
-//             console.log(values); // ["Promise One resolved", "Promise Two resolved"]
-//         })
-//         .catch((error) => {
-//             console.error("Error in one of the promises:", error);
-//         });
-<!-- </script>-->
+    const promise2 = new Promise((resolve, reject) => {
+        const randomNumber = Math.floor(Math.random()*10);
+        setTimeout(() => {
+            if (randomNumber < 5) {
+                resolve ('You are correct')
+            } else {
+                reject ('You are wrong')
+            }
+        })
+    });
 
-<!--<script>-->
-<!--    // Async and Await Example-->
-<!--    const preheatOven = () => {-->
-<!--        setTimeout(() => {-->
-<!--            const preheatOven = true;-->
-<!--            if (preheatOven) {-->
-<!--                console.log("Oven is preheated");-->
-<!--            } else {-->
-<!--                console.log("Oven is not preheated");-->
-<!--            }-->
-<!--        }, 6000)-->
-<!--    };-->
+    promise2.then((result) => {
+        console.log(result);
+    }).catch((error) => {
+        console.error(error);
+    });
 
-<!--    const addChocolate = () => {-->
-<!--        setTimeout(() => {-->
-<!--            const addChocolate = false;-->
-<!--            if (addChocolate) {-->
-<!--                console.log("Cocoa powder is added");-->
-<!--            } else {-->
-<!--                console.log("Cocoa powder is not added");-->
-<!--            }-->
-<!--        }, 2000)-->
-<!--    };-->
+    console.log(promise2);
 
-<!--    const mixFlour = () => {-->
-<!--        setTimeout(() => {-->
-<!--            const mixFlour = true;-->
-<!--            if (mixFlour) {-->
-<!--                console.log("Flour is mixed");-->
-<!--            } else {-->
-<!--                console.log("Flour is not mixed");-->
-<!--            }-->
-<!--        }, 1500)-->
-<!--    };-->
+    // another example of showing how the promise works
+    const promise_alt1 = new Promise((resolve, reject) => {
+        resolve("Promise 1 is resolved.");
+    });
 
-<!--    const bakeCake = async () => {-->
-<!--        try {const task1 = await preheatOven();-->
-<!--            console.log(task1);-->
+    const promise_alt2 = new Promise((resolve, reject) => {
+        resolve("Promise 2 is resolved.");
+    });
 
-<!--            const task2 = await addChocolate();-->
-<!--            console.log(task2);-->
+    const promise_alt3 = new Promise((resolve, reject) => {
+        reject("error, Promise 3 is rejected.");
+    });
 
-<!--            const task3 = await mixFlour();-->
-<!--            console.log(task3);-->
+    promise_alt1.then((value1) => {
+        console.log(value1);
+        return promise_alt2;
+    }).then((value2) => {
+        console.log(value2);
+        return promise_alt3;
+    }).catch((error) => {
+        console.error(error);
+    });
 
-<!--            console.log("Cake is ready to be served!");}-->
-<!--        catch (error) {-->
-<!--            console.error("Failed the task:", error);-->
-<!--        }-->
-<!--    };-->
+// Example of Promise.all
+    const promiseOne = new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Promise One resolved");
+        }, 4000);
+    });
 
-<!--    bakeCake();-->
-<!--</script>-->
+    const promiseTwo = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            reject("Promise Two rejected");
+        }, 2500);
+    });
+
+    Promise.all([promiseOne, promiseTwo])
+        .then((values) => {
+            console.log(values); // ["Promise One resolved", "Promise Two resolved"]
+        })
+        .catch((error) => {
+            console.error("Error in one of the promises:", error);
+        });
+ </script>
+
+<script>
+    // Async and Await Example
+    const preheatOven = () => {
+        setTimeout(() => {
+            const preheatOven = true;
+            if (preheatOven) {
+                console.log("Oven is preheated");
+            } else {
+                console.log("Oven is not preheated");
+            }
+        }, 6000)
+    };
+
+    const addChocolate = () => {
+        setTimeout(() => {
+            const addChocolate = false;
+            if (addChocolate) {
+                console.log("Cocoa powder is added");
+            } else {
+                console.log("Cocoa powder is not added");
+            }
+        }, 2000)
+    };
+
+    const mixFlour = () => {
+        setTimeout(() => {
+            const mixFlour = true;
+            if (mixFlour) {
+                console.log("Flour is mixed");
+            } else {
+                console.log("Flour is not mixed");
+            }
+        }, 1500)
+    };
+
+    const bakeCake = async () => {
+        try {const task1 = await preheatOven();
+            console.log(task1);
+
+            const task2 = await addChocolate();
+            console.log(task2);
+
+            const task3 = await mixFlour();
+            console.log(task3);
+
+            console.log("Cake is ready to be served!");}
+        catch (error) {
+            console.error("Failed the task:", error);
+        }
+    };
+
+    bakeCake();
+</script>
 
 <script>
     // fetch api example
