@@ -86,7 +86,7 @@
     });
 
     promise2.then((result) => {
-        console.log(value);
+        console.log(result);
     }).catch((error) => {
         console.error(error);
     });
@@ -123,9 +123,9 @@
         }, 4000);
     });
 
-    const promiseTwo = new Promise((resolve) => {
+    const promiseTwo = new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve("Promise Two resolved");
+            reject("Promise Two rejected");
         }, 2500);
     });
 
@@ -136,5 +136,59 @@
         .catch((error) => {
             console.error("Error in one of the promises:", error);
         });
+</script>
+
+<script>
+    // Async and Await Example
+    const preheatOven = () => {
+        setTimeout(() => {
+            const preheatOven = true;
+            if (preheatOven) {
+                console.log("Oven is preheated");
+            } else {
+                console.log("Oven is not preheated");
+            }
+        }, 6000)
+    };
+
+    const addChocolate = () => {
+        setTimeout(() => {
+            const addChocolate = false;
+            if (addChocolate) {
+                console.log("Cocoa powder is added");
+            } else {
+                console.log("Cocoa powder is not added");
+            }
+        }, 2000)
+    };
+
+    const mixFlour = () => {
+        setTimeout(() => {
+            const mixFlour = true;
+            if (mixFlour) {
+                console.log("Flour is mixed");
+            } else {
+                console.log("Flour is not mixed");
+            }
+        }, 1500)
+    };
+
+    const bakeCake = async () => {
+        try {const task1 = await preheatOven();
+            console.log(task1);
+
+            const task2 = await addChocolate();
+            console.log(task2);
+
+            const task3 = await mixFlour();
+            console.log(task3);
+
+            console.log("Cake is ready to be served!");}
+        catch (error) {
+            console.error("Failed the task:", error);
+        }
+    };
+
+    bakeCake();
 </script>
 </html>
